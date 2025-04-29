@@ -1,0 +1,81 @@
+{
+  "rules": {
+    "file-naming": {
+      "components": {
+        "pattern": "^[A-Z][a-zA-Z0-9]*\\.(tsx|ts|jsx|js)$",
+        "message": "Component files should be PascalCase and use .tsx/.ts extension"
+      },
+      "hooks": {
+        "pattern": "^use[A-Z][a-zA-Z0-9]*\\.(ts|js)$",
+        "message": "Hook files should start with 'use' and use .ts/.js extension"
+      },
+      "utils": {
+        "pattern": "^[a-z][a-zA-Z0-9]*\\.(ts|js)$",
+        "message": "Utility files should be camelCase and use .ts/.js extension"
+      }
+    },
+    "imports": {
+      "order": [
+        "react",
+        "react-native",
+        "expo",
+        "@/*",
+        "./*"
+      ],
+      "grouping": {
+        "external": "^[^@/]",
+        "internal": "^@/",
+        "relative": "^\\."
+      }
+    },
+    "components": {
+      "props": {
+        "interface": true,
+        "type": "TypeScript"
+      },
+      "default-export": false,
+      "naming": {
+        "pattern": "^[A-Z][a-zA-Z0-9]*$",
+        "message": "Component names should be PascalCase"
+      }
+    },
+    "hooks": {
+      "naming": {
+        "pattern": "^use[A-Z][a-zA-Z0-9]*$",
+        "message": "Hook names should start with 'use' and be camelCase"
+      }
+    },
+    "styles": {
+      "prefer": "StyleSheet",
+      "location": "bottom-of-file"
+    },
+    "types": {
+      "location": "types/",
+      "naming": {
+        "pattern": "^[A-Z][a-zA-Z0-9]*$",
+        "message": "Type names should be PascalCase"
+      }
+    },
+    "testing": {
+      "location": "__tests__/",
+      "naming": {
+        "pattern": "^[A-Z][a-zA-Z0-9]*\\.(test|spec)\\.(tsx|ts|jsx|js)$",
+        "message": "Test files should be PascalCase and include .test or .spec"
+      }
+    },
+    "git": {
+      "commit": {
+        "pattern": "^(feat|fix|docs|style|refactor|test|chore): .{1,50}$",
+        "message": "Commit messages should follow conventional commits format"
+      }
+    }
+  },
+  "ignore": [
+    "node_modules",
+    ".expo",
+    "build",
+    "dist",
+    "coverage",
+    "*.d.ts"
+  ]
+} 
